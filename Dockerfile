@@ -16,10 +16,9 @@ RUN wget https://jdbc.postgresql.org/download/postgresql-9.4.1212.jar \
 			       create-jdbc-connection-pool \
 			        --datasourceclassname org.postgresql.ds.PGConnectionPoolDataSource  \
 			        --restype javax.sql.ConnectionPoolDataSource \
-				--property portNumber=5432:password=password:user=app:serverName=db:databaseName=app \
+				--property portNumber=5432:password=pnpc_password:user=pnpc_app:serverName=db:databaseName=pnpc_app \
 				postgres-pool && \
     /opt/payara41/bin/asadmin --user admin \
                               --passwordfile=/opt/pwdfile \
 			       create-jdbc-resource --connectionpoolid postgres-pool jdbc/postgres-pool && \
     /opt/payara41/bin/asadmin stop-domain
-
