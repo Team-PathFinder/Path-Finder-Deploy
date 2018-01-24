@@ -1,4 +1,4 @@
-#Deployment for Path-Finder app
+# Deployment for Path-Finder app
 
 The .war file contains our packaged project.
 
